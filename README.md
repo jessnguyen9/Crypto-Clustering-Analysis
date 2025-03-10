@@ -1,35 +1,30 @@
 # Crypto Clustering Analysis
 
 ## Overview
-This analysis focuses on clustering cryptocurrencies based on key metrics such as price, market capitalization, trading volume, and volatility. By utilizing machine learning techniques, specifically K-means clustering, the goal was to group cryptocurrencies with similar characteristics, offering insights into market behavior. These insights are intended to guide investors, traders, and analysts in understanding cryptocurrency trends, identifying potential investment opportunities, and evaluating market risks.
+In this project, the goal was to group different cryptocurrencies based on their market data to uncover hidden patterns and trends. By using a method called K-Means clustering, we were able to divide the cryptocurrencies into distinct groups, which helped us identify similarities and differences among them. These insights can be helpful for decision-making, such as making investment choices or crafting targeted marketing strategies.
+
+We used two different methods to perform this clustering: one that kept all the data features (original data) and one that simplified the data by reducing the number of features (through PCA, a method for simplifying complex data). We compared these two methods to understand how using fewer features affects the clustering results.
 
 ## Techniques & Tools Used
-**Data Preprocessing:** **Pandas** was used to clean the dataset, handling missing values and outliers. Data was transformed and scaled using **StandardScaler** to ensure fair comparisons between cryptocurrencies.
+**K-Means Clustering:** To group cryptocurrencies based on their market data.
 
-**Clustering Algorithm:**
-- **K-means clustering** was implemented to group cryptocurrencies into clusters based on similarities across multiple features such as market cap, price, and volatility.
-- The optimal number of clusters was determined using the **Elbow Method** and **Silhouette Score**, ensuring that the clusters were both meaningful and interpretable.
+**Principal Component Analysis (PCA):** A method used to simplify the data by reducing the number of features (or characteristics) while keeping the most important information.
 
-**Demensionality Reduction:** **PCA (Principal Component Analysis)** was used to reduce the dimensionality of the dataset, visualizing the clusters in two dimensions while retaining key variance across features.
+**Python Libraries:** Pandas, NumPy, Matplotlib, and Scikit-learn for data manipulation and analysis.
 
-**Data Visualization:** **Matplotlib** and **Seaborn** were used to create visual representations of the clusters, such as scatter plots and heatmaps, which helped in interpreting the data patterns.
+**Data Visualization:** HVPlot for interactive visualizations, including scatter plots and elbow curves.
 
-## Methodology
-1. **Data Cleaning**
+## Impact of Using Fewer Features for Clustering
+When we reduced the number of features (or characteristics) that we used to group the cryptocurrencies, we noticed two key things:
 
-The initial dataset contained missing values and extreme outliers, which were addressed by imputing missing data where possible and removing outliers that could impact the integrity of the clustering results.
+1. **Easy to Understand:** With fewer features, the results were simpler and easier to visualize. The charts and graphs became less crowded, making it easier to see how the cryptocurrencies grouped together. This is especially helpful if you're trying to get a quick overview without getting lost in too many details.
+2. **Less Detail in the Clusters:** On the flip side, using fewer features also meant that the clusters might not have been as precise. With less information to work with, the algorithm grouped some cryptocurrencies together that might have been more distinct if we had kept all the original features. So, while the results were easier to interpret, they may not have been as accurate in fully capturing the differences between each cryptocurrency.
 
-2. **Feature Engineering**
+In this analysis, we compared how the clusters looked when using fewer features (via PCA) and the original data. This allowed us to see how simplifying the data impacted the accuracy of the clusters, and to decide whether simplicity or precision was more important for our goals.
 
-Relevant features, including price, market cap, and trading volume, were selected and scaled. 
 
-3. **K-means Clustering**
+![Crypto Price Change Scatter Plot](https://github.com/user-attachments/assets/bff801b8-830a-4f23-bef8-6159661174a3)
 
-After scaling the features, K-means clustering was applied to group cryptocurrencies. The Elbow Method was used to determine the number of clusters, with the aim of balancing between simplicity and complexity.
+![Crypto Clustering Scatter Plot_pca](https://github.com/user-attachments/assets/775075dc-f5a3-4cd5-aa8c-0e91505ce45c)
 
-Each cryptocurrency was assigned to a specific cluster, representing similar behavior and traits.
-
-4. **PCA Visualization**
-
-To simplify the interpretation of high-dimensional clustering results, PCA was employed to reduce the dataset to two dimensions. This enabled easy visualization of the clusters on a 2D scatter plot, showing how cryptocurrencies with similar features grouped together.
 
