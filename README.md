@@ -22,8 +22,11 @@ When we reduced the number of features (or characteristics) that we used to grou
 
 In this analysis, we compared how the clusters looked when using fewer features (via PCA) and the original data. This allowed us to see how simplifying the data impacted the accuracy of the clusters, and to decide whether simplicity or precision was more important for our goals.
 
+**K-Means Clustering: Cryptocurrency Price Change Patterns**
 
 ![Crypto Price Change Scatter Plot](https://github.com/user-attachments/assets/bff801b8-830a-4f23-bef8-6159661174a3)
+
+**PCA Clustering: Dimensionality-Reduced Cryptocurrency Price Trends**
 
 ![Crypto Clustering Scatter Plot_pca](https://github.com/user-attachments/assets/775075dc-f5a3-4cd5-aa8c-0e91505ce45c)
 
