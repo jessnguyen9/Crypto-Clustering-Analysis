@@ -30,4 +30,16 @@ In this analysis, we compared how the clusters looked when using fewer features 
 
 ![Crypto Clustering Scatter Plot_pca](https://github.com/user-attachments/assets/775075dc-f5a3-4cd5-aa8c-0e91505ce45c)
 
+## Cluster Analysis Results
+**Choosing the Best Number of Clusters (k)**
 
+To determine how many groups (or clusters) we should have, we used something called the Elbow Method. This method helped us visually find the best number of clusters. The result showed that k=4 was the best number, meaning that the data was best divided into four groups.
+
+![Elbow Curve](https://github.com/user-attachments/assets/dabbc88c-94fe-490b-98b7-05b173789e36)
+
+**Visualization of Results**
+
+We used a scatter plot to show how the cryptocurrencies were grouped based on their two most important features (Principal Components). This helped us easily see the clusters and how the cryptocurrencies within each group were similar to one another.
+
+## Conclusion
+In this project, we used K-Means clustering to group cryptocurrencies into different categories based on market data. By comparing results from clustering with all features versus fewer features, we gained insights into how simplifying the data affects the interpretation of the results. Ultimately, this analysis provides valuable information for businesses looking to better understand cryptocurrency trends and make more informed decisions in areas like investment and marketing.
